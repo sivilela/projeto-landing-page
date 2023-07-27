@@ -1,0 +1,32 @@
+.galeria-destaques{
+  background-color: #DAE5E8;
+  /* border: 2px solid yellow; */
+  display: grid;
+  grid-template: auto;
+  grid-template-columns: repeat(auto-fit, 150px);
+  gap: 80px;
+  min-height: 80hw;
+  padding: 5%;
+  justify-items: center;
+  justify-content: space-around;
+  /* flex-wrap: wrap; */
+}
+
+span{
+ text-decoration: line-through;
+}
+
+
+
+.tamanho-cards{
+  border: 2px solid #4b515981;
+  background-color: rgba(249, 249, 249, 0.523);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 60vh;
+  width: 40vh;
+  text-align:left;
+  border-radius: 7px;
+  padding: 10px;
+}

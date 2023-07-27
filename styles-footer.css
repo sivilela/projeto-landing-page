@@ -1,0 +1,51 @@
+footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2px solid #4b51597b;
+  border-bottom: 2px solid #4b51597b;
+  padding: 15px;
+}
+
+form{
+  /* border: 2px solid violet; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  height: 20vh;
+  width: 60vw;
+}
+
+.tamanho-redes-sociais{
+  width: 2em;
+}
+
+.tamanho-cartao-etc{
+  width: 2em;
+}
+
+.alinhar-footer{
+  /* border: 2px solid black; */
+  display: flex;
+  width: 15vw;
+  justify-content: space-between;
+  
+}
+
+.bt-formulario{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  height: 25px;
+  width: 15%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.bt-formulario:hover{
+  background-color: #4B5159;
+  color: white;  
+  border-radius: 5px;  
+  font-family: Arial, Helvetica, sans-serif;
+}

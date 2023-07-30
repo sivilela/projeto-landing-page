@@ -1,5 +1,4 @@
 header{
-  /* border: 4px solid blue; */
   background-color: #DAE5E8;
   display: flex;
   justify-content: space-between;
@@ -9,7 +8,6 @@ header{
 
 .menu-topo{
   display: flex;
-  /* justify-content: space-around; */
   align-items: center;
   font-size: 1.2em;
   width: 70%;
@@ -21,7 +19,7 @@ header{
 }
 
 .link-menu{
-  color: black;
+  color: #4B5159;
   text-decoration: none;
   padding: 10px;
   
@@ -44,3 +42,49 @@ header{
   height: 4vh;
 }
 
+@media screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  /* celulares */  
+  .menu-carrinho{
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+  }
+  .menu-topo{
+    display: flex;
+    flex-direction: column;
+    width: 10px;
+  }
+
+  header{
+    border: 4px solid #4b515900;
+    background-color: #DAE5E8;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+@media screen and (min-device-width : 481px) and (max-device-width : 800px) {
+  /* tablets */
+  .menu-carrinho{
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+  }
+  .menu-topo{
+    display: flex;
+    flex-direction: column;
+    width: 10px;
+  }
+ 
+  header{ 
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+@media screen and (min-device-width : 1200px) {
+  /* computadores */
+  .menu-topo{
+    font-size: 30px;
+  }
+}

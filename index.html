@@ -10,18 +10,21 @@
   <link rel="stylesheet" type="text/css" href="styles-principal.css">
   <link rel="stylesheet" type="text/css" href="styles-destaque.css">
   <link rel="stylesheet" type="text/css" href="styles-footer.css">
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <title>Four Comfort</title>
 </head>
 <body>
   <header>
     <img id="imgLogo" src="./image/logo.png" alt="Logo da página">
-    <nav class="menu-topo">
-      <ul>
+    <nav class="menu-topo" id="nav">
+      <!-- <button id="bt-nav">Menu</button> -->
+      <ul id="menu">
         <a href="#" class="link-menu">Sobre</a>
         <a href="#" class="link-menu">Produtos</a>
         <a href="#" class="link-menu">Contato</a>
         <a href="#" class="link-menu">Depoimentos</a>
-        <a href="#" class="link-menu">Em destaque</a>
+        <a href="#" class="link-menu" id="idEmDestaque">Em destaque</a>
       </ul>
     </nav>
     <nav class="menu-carrinho">
@@ -32,13 +35,13 @@
   </header>
   <main>
     <section class="faixa-1">
-          <h1>15% OFF EM SUA PRIMEIRA COMPRA</h1>
+      <h1>15% OFF EM SUA PRIMEIRA COMPRA</h1>
     </section>
     <section class="apresentacao-produto-texto">
       <article class="alinha-text-esquerda">
         <h1 id="fonte-4comfort"> 4 COMFORT </h1>
         <p id="fonte-texto-4comfort">Conforto e <br>Tecnologia <br>no Estilo Casual</p>
-        <button type="submit" class="bt-compre-aqui">Compre Aqui</button>
+        <button type="submit" class="bt-compre-aqui" id="bt-id-rolagem">Compre Aqui</button>
       </article>
       <figure class="alinha-imagem-direita"> 
         <img id="alinha-sapato-azul-direita" src="./image/sapato-azul-sem-fundo.png">
@@ -46,8 +49,8 @@
     </section>
     <section class="faixa-2">
       <h1>EM DESTAQUE</h1>
-</section>
-    <section class="galeria-destaques">
+    </section>
+    <section class="galeria-destaques" id="id-destaque">
       <figure class="tamanho-cards">
         <img class="galeria-fundo-produto" src="image/cards/sapato-feminino-card-01.png" width="200px"/>
         <p><strong>Sapato feminino total conforto rosa linda</strong><br>
@@ -84,24 +87,29 @@
     </section>
   </main>
   <footer>
-    <div>
-      <ul class="alinhar-footer">
+    <div id="div-alinhar-cartao-etc">
+      <ul class="alinhar-footer" id="rolagem-footer">
           <img src="./image/icon-cartao.png" alt="Icone cartão" class="tamanho-cartao-etc">
           <img src="./image/icons-desconto.png" alt="Icone desconto" class="tamanho-cartao-etc">
           <img src="./image/icons-frete.png" alt="Icone frete" class="tamanho-cartao-etc">
           <img src="./image/icons-pix.png" alt="Icone desconto" class="tamanho-cartao-etc">
       </ul>
-    </div>    
+    </div>   
+    <div class="alinha-meio-footer"> 
+    <div>
+      <p class="peca-desconto">Peça seu cupom de desconto!</p>
+    </div>
     <form action="#">
-      <p>Peça seu cupom de desconto!</p>
       <label for="nome">Nome: </label>
       <input name="nome" id="nome" type="text">
-   
       <label for="email">Email: </label>
       <input name="email" id="email" type="email">
-   
-      <button class="bt-formulario" type="submit">Enviar</button>
+      <button onclick="abrirAlerta()" class="bt-formulario" type="submit">Enviar</button>
     </form>
+    <div class="endereco">
+      <p>Alameda Dois, 340 - Bragança Paulista/ SP - Telefone: 11 3462-5588</p>
+    </div>
+  </div>
     <div>
       <ul class="alinhar-footer">
         <a href="https://pt-br.facebook.com/" target="_blank"><img src="./image/icon-facebook.png" 

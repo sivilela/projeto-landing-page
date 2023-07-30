@@ -1,12 +1,33 @@
 .faixa-2{
   display: flex;
   align-items: center;
-  justify-content: center;
-  /* font-size: 100%; */
+  justify-content: center;  
   font-size: 1em;
+  color: #4B5159;
  }
  
  .faixa-2:hover{
    background-color: #4B5159;
    color: white;
  }
+
+ @media screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  /* celulares */  
+  .faixa-2, .faixa-2:hover{
+    font-size: 10px;
+  }
+}
+
+@media screen and (min-device-width : 481px) and (max-device-width : 800px) {
+  /* tablets */
+  .faixa-2, .faixa-2:hover{
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-device-width : 1200px) {
+  /* computadores */
+  .faixa-2, .faixa-2:hover{
+    font-size: 20px;
+  }
+}

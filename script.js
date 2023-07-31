@@ -4,10 +4,3 @@ function abrirAlerta(){
 }
 
 
-// Função Menu. Refazer
-// const btMenu = document.getElementById('bt-nav');
-// function toggleMenu(){
-//   const nav = document.getElementById('nav');
-//   nav.classList.toggle('active');
-// }
-// btMenu.addEventListener('click', toggleMenu);

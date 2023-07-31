@@ -99,12 +99,14 @@
     <div>
       <p class="peca-desconto">Peça seu cupom de desconto!</p>
     </div>
-    <form action="#">
+    <form id="form" action="#">
       <label for="nome">Nome: </label>
-      <input name="nome" id="nome" type="text">
+        <input name="nome" type="text" id="nome"  class="inputs required" oninput="nameValidate()">
+          <span class="span-required" >Nome deve ter no mínimo 3 caracteres</span>
       <label for="email">Email: </label>
-      <input name="email" id="email" type="email">
-      <button onclick="abrirAlerta()" class="bt-formulario" type="submit">Enviar</button>
+        <input name="email" id="email" type="email" class="inputs required" oninput="emailValidate()">
+         <span class="span-required" >Digite um email válido</span>
+         <button onclick="abrirAlerta()" class="bt-formulario" type="submit">Enviar</button>
     </form>
     <div class="endereco">
       <p>Alameda Dois, 340 - Bragança Paulista/ SP - Telefone: 11 3462-5588</p>
@@ -126,4 +128,44 @@
     </div>
   </footer>
 </body>
+<script>
+    const form   = document.getElementById('form')
+const campos = document.querySelectorAll('.required')
+const spans  = document.querySelectorAll('.span-required')
+const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;  
+
+form.addEventListener('submit', (event)=> {
+      event.preventDefault();
+      nameValidate();
+      emailValidate();
+})
+
+function setError(index){
+  campos[index].style.border = '1px solid #e63636';
+  spans[index].style.display = 'block';
+}
+
+function removeError(index){
+  campos[index].style.border = '';
+  spans[index].style.display = 'none';
+}
+
+function nameValidate(){
+  if (campos[0].value.length<3){
+    setError(0);
+  }
+  else{
+    removeError(0)
+  }
+}
+
+function emailValidate(){
+  if(!emailRegex.test(campos[1].value)){
+    setError(1);
+  }
+  else{
+    removeError(1)
+  }
+}
+</script>
 </html>
